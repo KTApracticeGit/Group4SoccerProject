@@ -1,6 +1,7 @@
 
 
 import POJO.APIPOJO;
+import POJO.CompetitionsPOJO;
 import POJO.POJOSpainAndEngland;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
@@ -45,14 +46,14 @@ public class APITasks {
         HttpGet httpGet = new HttpGet(uriBuilder.build());
         httpGet.setHeader("Accept", "application/json");
         httpGet.setHeader("Content-Type", "application/json");
-        httpGet.setHeader("X-Auth-Token","23313095d88c47c8a01362bf1adc1e6d");
+        httpGet.setHeader("X-Auth-Token","371c56e9b4e540ac915d2c7587b9b4d9");
 
         HttpResponse httpResponse = httpClient.execute(httpGet);
 
         ObjectMapper objectMapper = new ObjectMapper();
-     //   objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
 
-        TeamsPojo teamsPojo = objectMapper.readValue(httpResponse.getEntity().getContent(), TeamsPojo.class);
+        TeamsPojo teamsPojo=objectMapper.readValue(httpResponse.getEntity().getContent(),TeamsPojo.class);
 
 
         List<String> teams = new ArrayList<>();
@@ -321,7 +322,33 @@ public class APITasks {
     Deserialization type: POJO
      */
     public static List<String> getAllCompetitions() throws URISyntaxException, IOException {
-        return null;
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        URIBuilder uriBuilder = new URIBuilder();
+        uriBuilder.setScheme("http");
+        uriBuilder.setHost("api.football-data.org");
+        uriBuilder.setPath("v2/competitions");
+
+        HttpGet httpGet = new HttpGet(uriBuilder.build());
+        httpGet.setHeader("Accept","application/json");
+        httpGet.setHeader("X-Auth-Token","371c56e9b4e540ac915d2c7587b9b4d9");
+
+        HttpResponse response = httpClient.execute(httpGet);
+        Assert.assertEquals(HttpStatus.SC_OK,response.getStatusLine().getStatusCode());
+
+        org.codehaus.jackson.map.ObjectMapper objectMapper = new org.codehaus.jackson.map.ObjectMapper();
+        objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+        CompetitionsPOJO competitionsPOJO =objectMapper.readValue(response.getEntity().getContent(), CompetitionsPOJO.class);
+        List<String> names=new ArrayList<>();
+
+
+
+        for(int i = 0; i< competitionsPOJO.getCompetitions().size(); i++){
+            names.add((String)competitionsPOJO.getCompetitions().get(i).getName());
+        }
+
+
+        return names;
+
 
     }
 
