@@ -3,6 +3,15 @@ package POJO;
 public class Squad {
     private String position;
     private String name;
+    private String nationality;
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
 
     public String getName() {
         return name;
