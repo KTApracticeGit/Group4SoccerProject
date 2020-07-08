@@ -1,5 +1,7 @@
 
 
+import POJO.APIPOJO;
+import POJO.MidfieldersFromEngland;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import org.apache.http.HttpResponse;
@@ -10,15 +12,12 @@ import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.HttpClientBuilder;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.DeserializationConfig;
 import org.junit.Assert;
 import POJO.TeamsPojo;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import java.util.Set;
+import java.util.*;
 
 
 /**
@@ -162,7 +161,37 @@ public class APITasks {
      * Deserialization type: Pojo
      */
     public static List<String> getMidfielders() throws IOException, URISyntaxException {
-        return null;
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        URIBuilder uriBuilder = new URIBuilder();
+        uriBuilder.setScheme("http");
+        uriBuilder.setHost("api.football-data.org");
+        uriBuilder.setPath("v2/teams/66");
+
+        HttpGet httpGet = new HttpGet(uriBuilder.build());
+        httpGet.setHeader("Accept","application/json");
+        httpGet.setHeader("X-Auth-Token","371c56e9b4e540ac915d2c7587b9b4d9");
+
+        HttpResponse response = httpClient.execute(httpGet);
+        Assert.assertEquals(HttpStatus.SC_OK,response.getStatusLine().getStatusCode());
+
+        org.codehaus.jackson.map.ObjectMapper objectMapper = new org.codehaus.jackson.map.ObjectMapper();
+        objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+        MidfieldersFromEngland midfieldersFromEngland=objectMapper.readValue(response.getEntity().getContent(),MidfieldersFromEngland.class);
+        List<String> midfielders=new ArrayList<>();
+
+        try {
+            for(int i=0; i<midfieldersFromEngland.getSquad().size();i++){
+
+                if(midfieldersFromEngland.getSquad().get(i).getPosition().equalsIgnoreCase("Midfielder")){
+                    midfielders.add((String) midfieldersFromEngland.getSquad().get(i).getName());
+                }
+
+            }
+
+        }catch (NullPointerException e){
+
+        }
+        return midfielders;
     }
 
     /*
@@ -216,7 +245,7 @@ public class APITasks {
             get.setHeader("X-Auth-Token","371c56e9b4e540ac915d2c7587b9b4d9");
             HttpResponse response=client.execute(get);
             ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
             APIPOJO apipojo=objectMapper.readValue(response.getEntity().getContent(),APIPOJO.class);
             List<Integer> goals=new ArrayList<>();
             for(int i=0; i<apipojo.getScorers().size();i++){
