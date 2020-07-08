@@ -1,7 +1,7 @@
 
 
 import POJO.APIPOJO;
-import POJO.MidfieldersFromEngland;
+import POJO.POJOSpainAndEngland;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import org.apache.http.HttpResponse;
@@ -176,14 +176,14 @@ public class APITasks {
 
         org.codehaus.jackson.map.ObjectMapper objectMapper = new org.codehaus.jackson.map.ObjectMapper();
         objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
-        MidfieldersFromEngland midfieldersFromEngland=objectMapper.readValue(response.getEntity().getContent(),MidfieldersFromEngland.class);
+        POJOSpainAndEngland POJOSpainAndEngland =objectMapper.readValue(response.getEntity().getContent(), POJOSpainAndEngland.class);
         List<String> midfielders=new ArrayList<>();
 
         try {
-            for(int i=0; i<midfieldersFromEngland.getSquad().size();i++){
+            for(int i = 0; i< POJOSpainAndEngland.getSquad().size(); i++){
 
-                if(midfieldersFromEngland.getSquad().get(i).getPosition().equalsIgnoreCase("Midfielder")){
-                    midfielders.add((String) midfieldersFromEngland.getSquad().get(i).getName());
+                if(POJOSpainAndEngland.getSquad().get(i).getPosition().equalsIgnoreCase("Midfielder")){
+                    midfielders.add((String) POJOSpainAndEngland.getSquad().get(i).getName());
                 }
 
             }
@@ -216,14 +216,14 @@ public class APITasks {
 
         org.codehaus.jackson.map.ObjectMapper objectMapper = new org.codehaus.jackson.map.ObjectMapper();
         objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
-        MidfieldersFromEngland midfieldersFromEngland=objectMapper.readValue(response.getEntity().getContent(),MidfieldersFromEngland.class);
+        POJOSpainAndEngland POJOSpainAndEngland =objectMapper.readValue(response.getEntity().getContent(), POJOSpainAndEngland.class);
         List<String> midfielders=new ArrayList<>();
 
         try {
-            for(int i=0; i<midfieldersFromEngland.getSquad().size();i++){
+            for(int i = 0; i< POJOSpainAndEngland.getSquad().size(); i++){
 
-                if(midfieldersFromEngland.getSquad().get(i).getPosition().equalsIgnoreCase("Midfielder")&&midfieldersFromEngland.getSquad().get(i).getNationality().equals("Brazil")){
-                    midfielders.add((String) midfieldersFromEngland.getSquad().get(i).getName());
+                if(POJOSpainAndEngland.getSquad().get(i).getPosition().equalsIgnoreCase("Midfielder")&& POJOSpainAndEngland.getSquad().get(i).getNationality().equals("Brazil")){
+                    midfielders.add((String) POJOSpainAndEngland.getSquad().get(i).getName());
                 }
 
             }
@@ -256,15 +256,15 @@ public class APITasks {
 
         org.codehaus.jackson.map.ObjectMapper objectMapper = new org.codehaus.jackson.map.ObjectMapper();
         objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
-        MidfieldersFromEngland midfieldersFromEngland=objectMapper.readValue(response.getEntity().getContent(),MidfieldersFromEngland.class);
+        POJOSpainAndEngland POJOSpainAndEngland =objectMapper.readValue(response.getEntity().getContent(), POJOSpainAndEngland.class);
         List<String> attackers=new ArrayList<>();
 
 
         try {
-            for(int i=0; i<midfieldersFromEngland.getSquad().size();i++){
+            for(int i = 0; i< POJOSpainAndEngland.getSquad().size(); i++){
 
-                if(midfieldersFromEngland.getSquad().get(i).getPosition().equalsIgnoreCase("Attacker")&&midfieldersFromEngland.getSquad().get(i).getNationality().equals("England")){
-                    attackers.add((String) midfieldersFromEngland.getSquad().get(i).getName());
+                if(POJOSpainAndEngland.getSquad().get(i).getPosition().equalsIgnoreCase("Attacker")&& POJOSpainAndEngland.getSquad().get(i).getNationality().equals("England")){
+                    attackers.add((String) POJOSpainAndEngland.getSquad().get(i).getName());
                 }
 
             }
@@ -281,7 +281,39 @@ public class APITasks {
      * Deserialization type: Pojo
      */
     public static List<String> getSpainCoach() throws URISyntaxException, IOException {
-        return null;
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        URIBuilder uriBuilder = new URIBuilder();
+        uriBuilder.setScheme("http");
+        uriBuilder.setHost("api.football-data.org");
+        uriBuilder.setPath("v2/teams/77");
+
+        HttpGet httpGet = new HttpGet(uriBuilder.build());
+        httpGet.setHeader("Accept","application/json");
+        httpGet.setHeader("X-Auth-Token","371c56e9b4e540ac915d2c7587b9b4d9");
+
+        HttpResponse response = httpClient.execute(httpGet);
+        Assert.assertEquals(HttpStatus.SC_OK,response.getStatusLine().getStatusCode());
+
+        org.codehaus.jackson.map.ObjectMapper objectMapper = new org.codehaus.jackson.map.ObjectMapper();
+        objectMapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+        POJOSpainAndEngland POJOSpainAndEngland = objectMapper.readValue(response.getEntity().getContent(), POJOSpainAndEngland.class);
+        List<String> coachs=new ArrayList<>();
+
+
+        try {
+            for(int i = 0; i< POJOSpainAndEngland.getSquad().size(); i++){
+
+                if(POJOSpainAndEngland.getSquad().get(i).getRole().equalsIgnoreCase("COACH")){
+                    coachs.add((String) POJOSpainAndEngland.getSquad().get(i).getName());
+                }
+
+            }
+
+        }catch (NullPointerException e){
+
+        }
+        return coachs;
+
     }
 
     /*

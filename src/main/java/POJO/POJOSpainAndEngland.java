@@ -2,7 +2,7 @@ package POJO;
 
 import java.util.List;
 
-public class MidfieldersFromEngland {
+public class POJOSpainAndEngland {
     private List<Squad> squad;
 
     public List<Squad> getSquad() {
