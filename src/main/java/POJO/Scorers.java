@@ -1,3 +1,4 @@
+package POJO;
 import java.util.Map;
 
 public class Scorers {
