@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.Assert;
@@ -71,6 +72,8 @@ public class APITests {
     @Test
     public void getAllCompetitionsTest() throws IOException, URISyntaxException {
         List<String> actualCompetitionsList = APITasks.getAllCompetitions();
+        Collections.sort(TestConstants.getExpectedCompetitionsList());
+        Collections.sort(actualCompetitionsList);
         Assert.assertEquals(TestConstants.getExpectedCompetitionsList().size(), actualCompetitionsList.size());
         Assert.assertEquals(TestConstants.getExpectedCompetitionsList(), actualCompetitionsList);
     }
