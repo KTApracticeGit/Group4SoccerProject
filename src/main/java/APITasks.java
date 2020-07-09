@@ -38,6 +38,7 @@ public class APITasks {
 
         URIBuilder uriBuilder = new URIBuilder();
 //http://api.football-data.org/v2/teams/
+        // Nurzada`s change
         uriBuilder.setScheme("http");
         uriBuilder.setHost("api.football-data.org");
         uriBuilder.setPath("v2/teams/");
