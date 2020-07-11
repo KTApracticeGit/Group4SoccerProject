@@ -45,6 +45,9 @@ public class APITests {
     public void getAttackerFromEnglandTest() throws IOException, URISyntaxException {
         List<String> actualAttackerFromEngland = APITasks.getAttackerFromEngland();
         Assert.assertEquals("Failed to verify number of attackers", TestConstants.getExpectedAttackers().length, actualAttackerFromEngland.size());
+
+
+
         Assert.assertEquals("Failed to verify list of attackers from England team", Arrays.asList(TestConstants.getExpectedAttackers()), actualAttackerFromEngland);
     }
 
