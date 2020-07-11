@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6cc2f615-11d8-4a66-acd8-f8941b1695d9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eSrij8evRJQ6VXvStOPpGB8aB5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager" selected="JUnit.APITests">
+    <configuration name="APITests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="apiWeek2Project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="APITests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APITests.getAllTeamsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="apiWeek2Project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="APITests" />
+      <option name="METHOD_NAME" value="getAllTeamsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APITests.getMidfieldersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="apiWeek2Project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="APITests" />
+      <option name="METHOD_NAME" value="getMidfieldersTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.APITests" />
+        <item itemvalue="JUnit.APITests.getAllTeamsTest" />
+        <item itemvalue="JUnit.APITests.getMidfieldersTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cc2f615-11d8-4a66-acd8-f8941b1695d9" name="Default Changelist" comment="" />
+      <created>1594325963572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594325963572</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1386" height="415" key="GridCell.Tab.0.bottom" timestamp="1594346157802">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1866" height="415" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594332006650" />
+    <state width="1386" height="415" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1594346157802" />
+    <state width="906" height="415" key="GridCell.Tab.0.bottom/0.23.1280.736/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594328036259" />
+    <state width="906" height="415" key="GridCell.Tab.0.bottom/0.23.1280.737/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330617119" />
+    <state width="906" height="415" key="GridCell.Tab.0.bottom/0.23.1280.738/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330835239" />
+    <state width="1866" height="469" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-49.1920.997@1280.-49.1920.997" timestamp="1594327665345" />
+    <state width="1866" height="548" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594326663624" />
+    <state width="1386" height="415" key="GridCell.Tab.0.center" timestamp="1594346157801">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1866" height="415" key="GridCell.Tab.0.center/0.0.1280.800/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594332006646" />
+    <state width="1386" height="415" key="GridCell.Tab.0.center/0.0.1440.849@0.0.1440.849" timestamp="1594346157781" />
+    <state width="1386" height="415" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1594346157801" />
+    <state width="906" height="415" key="GridCell.Tab.0.center/0.23.1280.736/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594328036256" />
+    <state width="906" height="415" key="GridCell.Tab.0.center/0.23.1280.737/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330617113" />
+    <state width="906" height="415" key="GridCell.Tab.0.center/0.23.1280.738/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330835231" />
+    <state width="1866" height="469" key="GridCell.Tab.0.center/0.23.1280.777/1280.-49.1920.997@1280.-49.1920.997" timestamp="1594327665339" />
+    <state width="1866" height="548" key="GridCell.Tab.0.center/0.23.1280.777/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594326663620" />
+    <state width="1386" height="415" key="GridCell.Tab.0.left" timestamp="1594346157799">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1866" height="415" key="GridCell.Tab.0.left/0.0.1280.800/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594332006644" />
+    <state width="1386" height="415" key="GridCell.Tab.0.left/0.0.1440.849@0.0.1440.849" timestamp="1594346157768" />
+    <state width="1386" height="415" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1594346157799" />
+    <state width="906" height="415" key="GridCell.Tab.0.left/0.23.1280.736/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594328036254" />
+    <state width="906" height="415" key="GridCell.Tab.0.left/0.23.1280.737/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330617112" />
+    <state width="906" height="415" key="GridCell.Tab.0.left/0.23.1280.738/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330835228" />
+    <state width="1866" height="469" key="GridCell.Tab.0.left/0.23.1280.777/1280.-49.1920.997@1280.-49.1920.997" timestamp="1594327665337" />
+    <state width="1866" height="548" key="GridCell.Tab.0.left/0.23.1280.777/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594326663618" />
+    <state width="1386" height="415" key="GridCell.Tab.0.right" timestamp="1594346157802">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1866" height="415" key="GridCell.Tab.0.right/0.0.1280.800/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594332006648" />
+    <state width="1386" height="415" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1594346157802" />
+    <state width="906" height="415" key="GridCell.Tab.0.right/0.23.1280.736/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594328036257" />
+    <state width="906" height="415" key="GridCell.Tab.0.right/0.23.1280.737/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330617117" />
+    <state width="906" height="415" key="GridCell.Tab.0.right/0.23.1280.738/1280.-49.1920.1057@1280.-49.1920.1057" timestamp="1594330835237" />
+    <state width="1866" height="469" key="GridCell.Tab.0.right/0.23.1280.777/1280.-49.1920.997@1280.-49.1920.997" timestamp="1594327665341" />
+    <state width="1866" height="548" key="GridCell.Tab.0.right/0.23.1280.777/1280.-72.1920.1080@1280.-72.1920.1080" timestamp="1594326663622" />
+    <state x="69" y="0" key="SettingsEditor" timestamp="1594326039474">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="69" y="0" key="SettingsEditor/0.0.1280.800/1280.-72.1920.1080@0.0.1280.800" timestamp="1594326039474" />
+  </component>
+</project>
